@@ -13,9 +13,9 @@ int main()
         intr>>x[i];
     }
 
-    for(int i=0;i<a;i++){
+    for(int i=0;i<a-1;i++){
         int p=i;
-        for(int j=i;j<a-1;j++){
+        for(int j=i;j<a;j++){
             if(x[j]<x[i]){
                 p=j;
             }
