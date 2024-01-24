@@ -1,1 +1,11 @@
-Lucian a fost aici
+#include<iostream>
+using namespace std;
+
+
+int main()
+{
+
+
+
+
+}
