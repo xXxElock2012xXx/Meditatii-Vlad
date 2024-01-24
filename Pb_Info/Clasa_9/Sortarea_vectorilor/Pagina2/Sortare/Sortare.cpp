@@ -15,7 +15,7 @@ int main()
 
     for(int i=0;i<a;i++){
         int p=i;
-        for(int j=i;j<a;j++){
+        for(int j=i;j<a-1;j++){
             if(x[j]<x[i]){
                 p=j;
             }
