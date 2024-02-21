@@ -10,18 +10,20 @@ int main(){
         cin>>x[i];
     }
     cin>>m;
-    for(int i=0;i<n;i++){//nu afiseaza nici acar fuck inainte de a incepe programul...
+    for(int i=0;i<m;i++){
         cin>>y[i];
     }
-    cout<<"fuck"<<endl;
+    int k=0;
     for(int i=0;i<n;i++){
-        if(x[i]==y[i]){
-             int j=i;
-            while(j+1 < n && x[j+1]==y[j+1])
-                j ++;
-            if(j-i + 1 > d-s +1)
-                s = i, d = j;
-            i = j;
+        if(x[i]==y[k]){
+            k++;
+        }else{
+            k=0;
+            i--;
+        }
+        if (k == m){
+            s = i-m + 2;
+            break;
         }
     }
     if(s){
@@ -29,11 +31,4 @@ int main(){
     }else{
         cout<<"NU"<<endl;
     }
-
-
-
-
 }
-
-
-
