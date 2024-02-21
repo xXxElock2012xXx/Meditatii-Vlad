@@ -12,19 +12,19 @@ int main()
     for(int i=0;i<a;i++){
         intr>>x[i];
     }
-
-    for(int i=0;i<a-1;i++){
-        int p=i;
-        for(int j=i;j<a;j++){
-            if(x[j]<x[i]){
-                p=j;
+    bool sortat=true;
+    do{
+        sortat=true;
+        for (int i=0;i<a-1;i++){
+            if(x[i]<x[i+1]){
+                int aux=x[i];
+                x[i]=x[i+1];
+                x[i+1]=aux;
+                sortat=false;
             }
         }
-        int max=x[i];
-        x[i]=x[p];
-        x[p]=max;
-    }
-    for(int i=a-1;i>=0;i--){
+    }while(!sortat);
+    for(int i=0;i<a;i++){
         cout<<x[i]<<" ";
     }
 
