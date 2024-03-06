@@ -17,7 +17,7 @@ int main()
             int  j = i;
             while(j + 1 < n && x[j + 1]==c)//vede ca prima secventa maxima e egala cu ultima si nnu mai cauta
                 j ++;
-            if(j - i + 1 > d - s + 1){
+            if(j - i + 1 >= d - s + 1){
                 s = i; d = j;
 
             }
